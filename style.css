@@ -9,6 +9,8 @@
     --color-white:#ffffff;
     --color-black:#000000;
     --color-background:#fffcf4;
+    --color-pink:#f6b4dd;
+    --color-blue:#4c67eb;
     --font-large:48px;
     --font-medium:28px;
     --font-regular:18px;
@@ -73,3 +75,60 @@ p{
     background-color: var(--color-background);
 }
 
+.navbar__logo{
+    font-size: var(--font-medium);
+    font-weight: bold;
+    color: var(--color-black);
+}
+.navbar__menu{
+    display: flex;
+}
+.navbar__menu__item{
+    padding: 8px 12px;
+    margin: 0 4px;
+    color: var(--color-black);
+    font-weight: bold;
+    cursor: pointer;
+}
+.navbar__menu__item.active{
+    border: 1px solid black;
+    border-radius: var(--size-border-radius);
+}
+.navbar__menu__item:hover{
+    background-color: var(--color-pink);
+    border-radius: var(--size-border-radius);
+}
+.navbar__toggle_btn{
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    font-size: 24px;
+    color: var(--color-black);
+    display: none;
+}
+
+/* 홈 */
+#home{
+    background: url(./images/background2.png) center/cover no-repeat;
+    padding: 40px;
+    text-align: center;
+}
+.home_avatar{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 2px solid var(--color-pink);
+}
+.home__title, .home__description{
+    color:var(--color-black);
+}
+
+.home__contact{
+    color:var(--color-black);
+    font-size: var(--font-regular);
+    font-weight: bold;
+    margin: 24px;
+    padding: 8px 12px;
+    background-color: var(--color-pink);
+    border: 2px solid var(--color-blue);
+}
