@@ -274,11 +274,11 @@ padding: 20px;
     border-radius: var(--size-border-radius);
     padding: 8px 30px;
 }
-.category__btn.active,.category__btn:hover{
+.category__btn.selected,.category__btn:hover{
     background-color: var(--color-green);
     border: 3px dotted var(--color-blue);
 }
-.category__btn:active .category__count, 
+.category__btn.selected .category__count, 
 .category__btn:hover .category__count{
     opacity: 1;
     top: 0;

@@ -77,7 +77,7 @@ workBtnContainer.addEventListener('click', (e) => {
         return;
     }
     
-    const active = document.querySelector('.category__btn selected');
+    const active = document.querySelector('.category__btn.selected');
     if(active !=null){
         active.classList.remove('selected');
     }
