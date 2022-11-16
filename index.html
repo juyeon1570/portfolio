@@ -10,21 +10,22 @@
     <link rel="icon" type="image/png" href="./images/lemon_logo.png">
     <script src="https://kit.fontawesome.com/77eb6cc9aa.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style.css">
+    <script defer src="./script.js"></script>
 </head>
 <body>
     <!-- Navbar 시작 -->
     <nav id="navbar">
         <div class="navbar__logo">
             <i class="fa-regular fa-lemon"></i>
-            <a href="#">Juy</a>
+            <a href="#" style="color: #f1c453; text-shadow: 1px 1px 1px #01c075;">Juy</a>
         </div>
         <ul class="navbar__menu">
-            <li class="navbar__menu__item active">홈</li>
-            <li class="navbar__menu__item">내 소개</li>
-            <li class="navbar__menu__item">기술</li>
-            <li class="navbar__menu__item">프로젝트</li>
-            <li class="navbar__menu__item">추천서</li>
-            <li class="navbar__menu__item">Contact</li>
+            <li class="navbar__menu__item active" data-link="#home">홈</li>
+            <li class="navbar__menu__item" data-link="#about">내 소개</li>
+            <li class="navbar__menu__item" data-link="#skills">기술</li>
+            <li class="navbar__menu__item" data-link="#work">프로젝트</li>
+            <li class="navbar__menu__item" data-link="#testimonials">추천서</li>
+            <li class="navbar__menu__item" data-link="#contact">Contact</li>
         </ul>
         <!-- 버튼 시작 -->
         <button class="navbar__toggle_btn">
@@ -39,15 +40,15 @@
             <img src="./images/sjy.png" alt="Juy's photo" class="home_avatar">
             <h1 class="home__title">안녕하세요. 저는 서주연입니다!</h1>
             <h2 class="home__description">부가사항</h2>
-            <button class="home__contact">연락 주세요!</button>
+            <button class="home__contact" data-link="#contact">연락 주세요!</button>
         </div>
     </section>
     <!-- Home 끝 -->
     <!-- 내소개 시작 -->
     <section id="about" class="section section__container">
-        <h1>내 소개</h1>
+        <h1>소개</h1>
         <p>
-            E-MAIL: m15701313@gmail.com
+            E-MAIL: m15701313@gmail.com<br>
             GIT:    https://github.com/juyeon1570
         </p>
         <div class="about__majors">
@@ -58,7 +59,7 @@
                 </div>
                 <h2 class="major__title">프론트엔드</h2>
                 <div class="major__description">
-                    HTML, CSS, JAVAScript, TypeScript, <br>React, Vue
+                    HTML, CSS, <br>JavaScript
                 </div>
             </div>
 
@@ -68,22 +69,22 @@
                 </div>
                 <h2 class="major__title">백엔드</h2>
                 <div class="major__description">
-                    JAVA, JavaScript, Go, NodeJS, <br>Spring, C#
+                    JAVA, C, C++, <br>Python
                 </div>
             </div>
 
             <div class="major">
                 <div class="major__icon">
-                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <i class="fa-solid fa-download"></i>
                 </div>
-                <h2 class="major__title">모바일</h2>
+                <h2 class="major__title">그 외</h2>
                 <div class="major__description">
-                    Android, IOS, React Native, Flutter,<br>Swift, Kotlin
+                    MatLab, arduino, <br>SQL, OrCAD
                 </div>
             </div>
         </div>
         <div class="about__jobs">
-            <div class="job">
+            <!-- <div class="job">
                 <img src="" alt="엔씨소프트">
                 <div class="job__description">
                     <p class="job__name">
@@ -93,16 +94,16 @@
                         2xxx. xx ~ 2xxx.xx
                     </p>
                 </div>
-            </div>
+            </div> -->
 
             <div class="job">
-                <img src="" alt="엔씨소프트">
+                <img src="./images/school-removebg-preview.png" alt="숭실대학교" style="width: 170px;" class="about__jobs__icon">
                 <div class="job__description">
                     <p class="job__name">
-                        모바일 개발팀 엔지니어
+                        숭실대학교 전자정보공학부(IT융합)
                     </p>
                     <p class="job__period">
-                        2xxx. xx ~ 2xxx.xx
+                        2018.03.~
                     </p>
                 </div>
             </div>
@@ -126,45 +127,110 @@
                             <span>100%</span>
                         </div>
                         <div class="skill__bar">
-                            <div class="skill__value"></div>
+                            <div class="skill__value" style="width: 100%;"></div>
                         </div>
                     </div>
                     <div class="skill">
                         <div class="sill__description">
-                            <span>HTML</span>
-                            <span>100%</span>
+                            <span>CSS</span>
+                            <span>80%</span>
                         </div>
                         <div class="skill__bar">
-                            <div class="skill__value"></div>
+                            <div class="skill__value" style="width: 80%;"></div>
                         </div>
                     </div>
+                    <div class="skill">
+                        <div class="sill__description">
+                            <span>JavaScript</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="sill__description">
+                            <span>Java</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width: 80%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="sill__description">
+                            <span>C</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="sill__description">
+                            <span>C++</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="sill__description">
+                            <span>Python</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="sill__description">
+                            <span>MySQL</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="sill__description">
+                            <span>MatLab</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width: 70%;"></div>
+                        </div>
+                    </div>
+
                 </div>
 
-            <div class="skillset__right">
-                <div class="tools">
-                    <h3 class="skillset__title">Tools</h3>
-                    <ul class="tools__list">
-                        <li><span>VisualStudio</span></li>
-                        <li><span>VisualStudio Code</span></li>
-                        <li><span>eclips</span></li>
-                        <li><span>intelliJ</span></li>
-                        <li><span>matlab</span></li>
-                        <li><span>Anaconda</span></li>
-                        <li><span>MySQL</span></li>
-                        <li><span>OrCAD</span></li>
-                        <li><span>git</span></li>
-                    </ul>
-                </div>
+                <div class="skillset__right">
+                    <div class="tools">
+                        <h3 class="skillset__title">Tools</h3>
+                        <ul class="tools__list">
+                            <li><span>VisualStudio</span></li>
+                            <li><span>VisualStudio Code</span></li>
+                            <li><span>eclips</span></li>
+                            <li><span>intelliJ</span></li>
+                            <li><span>matlab</span></li>
+                            <li><span>Anaconda</span></li>
+                            <li><span>MySQL</span></li>
+                            <li><span>OrCAD</span></li>
+                            <li><span>git</span></li>
+                        </ul>
+                    </div>
 
-                <div class="etc">
-                    <h3 class="skillset__title">Ect</h3>
-                    <ul>
-                        <li>Math</li>
-                        <li>History</li>
-                        <li>English</li>
-                    </ul>
+                    <div class="etc">
+                        <h3 class="skillset__title">Etc</h3>
+                        <ul>
+                            <li>정보처리기사</li>
+                            <li>한국사능력검정시험 2급</li>
+                            <li>Toeic</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
         </div>
     </section>
     <!-- 기술 끝 -->
@@ -175,84 +241,84 @@
             <h1>내 작업실</h1>
             <h3>프로젝트</h3>
             <div class="work__categories">
-                <button class="category__btn">
+                <button class="category__btn selected" data-filter="*">
                     전체 <span class="category__count">10</span>
                 </button>
-                <button class="category__btn">
+                <button class="category__btn" data-filter="front-end">
                     프론트엔드 <span class="category__count">5</span>
                 </button>
-                <button class="category__btn">
+                <button class="category__btn" data-filter="back-end">
                     백엔드 <span class="category__count">3</span>
                 </button>
-                <button class="category__btn">
+                <button class="category__btn" data-filter="mobile">
                     모바일 <span class="category__count">2</span>
                 </button>
             </div>
             <div class="work__projects">
-                <a href="" class="project" target="_blank">
+                <a href="" class="project" target="_blank" data-type="front-end">
                     <img src="" alt="" class="project__img">
                     <div class="project__description">
                         <h3>유튜브 클론코딩</h3>
                         <span>클론코딩</span>
                     </div>
                 </a>
-                <a href="" class="project" target="_blank">
+                <a href="" class="project" target="_blank" data-type="front-end">
                     <img src="" alt="" class="project__img">
                     <div class="project__description">
                         <h3>에어비엔비 클론코딩</h3>
                         <span>클론코딩</span>
                     </div>
                 </a>
-                <a href="" class="project" target="_blank">
+                <a href="" class="project" target="_blank" data-type="front-end">
                     <img src="" alt="" class="project__img">
                     <div class="project__description">
                         <h3>제주항공 클론코딩</h3>
                         <span>클론코딩</span>
                     </div>
                 </a>
-                <a href="" class="project" target="_blank">
+                <a href="" class="project" target="_blank" data-type="front-end">
                     <img src="" alt="" class="project__img">
                     <div class="project__description">
                         <h3>진에어 클론코딩</h3>
                         <span>클론코딩</span>
                     </div>
                 </a>
-                <a href="" class="project" target="_blank">
+                <a href="" class="project" target="_blank" data-type="front-end">
                     <img src="" alt="" class="project__img">
                     <div class="project__description">
                         <h3>배달의 민족 클론코딩</h3>
                         <span>클론코딩</span>
                     </div>
                 </a>
-                <a href="" class="project" target="_blank">
+                <a href="" class="project" target="_blank" data-type="front-end">
                     <img src="" alt="" class="project__img">
                     <div class="project__description">
                         <h3>CGV 클론코딩</h3>
                         <span>클론코딩</span>
                     </div>
                 </a>
-                <a href="" class="project" target="_blank">
+                <a href="" class="project" target="_blank" data-type="front-end">
                     <img src="" alt="" class="project__img">
                     <div class="project__description">
                         <h3>마켓컬리 클론코딩</h3>
                         <span>클론코딩</span>
                     </div>
                 </a>
-                <a href="" class="project" target="_blank">
+                <a href="" class="project" target="_blank" data-type="front-end">
                     <img src="" alt="" class="project__img">
                     <div class="project__description">
                         <h3>트리플 클론코딩</h3>
                         <span>클론코딩</span>
                     </div>
                 </a>
-                <a href="" class="project" target="_blank">
+                <a href="" class="project" target="_blank" data-type="front-end">
                     <img src="" alt="" class="project__img">
                     <div class="project__description">
                         <h3>여기어때 클론코딩</h3>
                         <span>클론코딩</span>
                     </div>
                 </a>
-                <a href="" class="project" target="_blank">
+                <a href="" class="project" target="_blank" data-type="front-end">
                     <img src="" alt="" class="project__img">
                     <div class="project__description">
                         <h3>야놀자 클론코딩</h3>
@@ -305,8 +371,8 @@
         </div>
     </section>
     <!-- 컨택트 끝 -->
-    <button class="arrow-up">
-        <i class="fa-solid fa-arrow-up"></i>
+    <button class="arrow-up" data-link="#home">
+        <i class="fa-solid fa-arrow-up" id="arrUp"></i>
     </button>
 </body>
 </html>

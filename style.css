@@ -14,6 +14,7 @@
     --color-yellow:#f1c453;
     --color-grey:rgb(66, 65, 65);
     --color-green:#01c075;
+    --color-red:#f56056;
     --font-large:48px;
     --font-medium:28px;
     --font-regular:18px;
@@ -73,17 +74,27 @@ p{
 
 /* navbar */
 #navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 16px;
     background-color: var(--color-background);
+    transition: all var(--animation-duration) ease-in-out;
+}
+
+#navbar.navbar--bold{
+    background-color: rgba(255, 250, 205, 0);
+    padding: 10px;
 }
 
 .navbar__logo{
     font-size: var(--font-medium);
     font-weight: bold;
-    color: var(--color-black);
+    color: var(--color-yellow);
+    text-shadow: 1px 1px 1px #01c075;
 }
 .navbar__menu{
     display: flex;
@@ -137,6 +148,10 @@ p{
     background-color: var(--color-pink);
     border: 2px solid var(--color-blue);
 }
+.home__contact:hover{
+    background-color: var(--color-yellow);
+    border: 3px dashed var(--color-red);
+}
 
 .section{
     padding: 50px;
@@ -169,6 +184,7 @@ p{
 
 .major__icon:hover i {
     color: var(--color-yellow);
+    background-color: var(--color-);
     transform: rotate(-30deg) scale(1.1);
 }
 
@@ -282,6 +298,7 @@ padding: 20px;
     justify-content: center;
 }
 .project{
+    border: 0.1px dotted var(--color-grey);
     position: relative;
     display: flex;
     justify-content: center;
@@ -322,7 +339,8 @@ padding: 20px;
     content: '';
     display: block;
     position: relative;
-    left: 30px;
+    left: 50%;
+    width: 25px;
     height: 2px;
     margin-left:-12px;
     margin-top:8px;
@@ -376,6 +394,29 @@ padding: 20px;
     transform:scale(1.1);
     color: var(--color-green);
 }
+
+
+/* 화살표 버튼 */
+
+.arrow-up{
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    font-size: 55px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 300ms ease-in;
+}
+
+.arrow-up.visible{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
 
 
 @media screen and (max-width: 768px) {
